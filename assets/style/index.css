@@ -1,29 +1,19 @@
 @import "./reset.css";
 
 :root {
-  --app-dark: #030022;
-  --app-light: #f0f2f4;
-  --app-blue: #95c2ff;
-  --app-blue-hover: #5aa0ff;
-  --app-green: #95ffd2;
-  --app-green-hover: #6effc1;
-  --app-red: #ff95c2;
-  --app-red-hover: #ff6eab;
-  --app-purple: #9d95ff;
-  --app-purple-hover: #796eff;
-  --app-orange: #ffd295;
-  --app-orange-hover: #ffc16e;
-  --app-yellow: #f7ff95;
+  --app-blue: #00A1FB;
+  --app-red: #FE008E;
+  --app-orange: #ffd295;  
 }
 
 body {
-  background: var(--app-red) url("") center center / cover no-repeat fixed;
+  background: var(--app-orange) url("../img/futuristic-bg.jpg") center center / cover no-repeat fixed;
 }
 
 .center {
   display: grid;
   width: 100%;
-  height: calc(var(--vh, 1vh) * 100);;
+  height: calc(var(--vh, 1vh) * 100);
   place-items: center;
 }
 
@@ -32,3 +22,160 @@ body {
   flex-flow: row wrap;
 }
 
+.body {
+  width: 40%;
+  gap: 0;
+  transition: width 0.25s;
+}
+
+.square {
+  width: calc(100% / 3);
+  border: 3px solid var(--app-red);
+  color: var(--app-blue);
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+
+.one {
+  border-left: none;
+  border-top: none;
+}
+.two {
+  border-top: none;
+}
+.three {
+  border-right: none;
+  border-top: none;
+}
+.four {
+  border-left: none;
+}
+.six {
+  border-right: none;
+}
+.seven {
+  border-left: none;
+  border-bottom: none;
+}
+.eight {
+  border-bottom: none;
+}
+.nine {
+  border-right: none;
+  border-bottom: none;
+}
+
+.restart {
+  width: 120px;
+  height: 50px;
+  background-color: var(--app-red);
+  border: 3px solid #B00062;
+  font-weight: 700;
+  color: var(--app-orange);
+  font-size: 20px;
+  border-radius: 50px;
+  position: absolute;
+  top: 25px;
+  left: calc(72.5% - 60px);
+}
+
+.end {
+  width: 100%;
+  height: calc(var(--vh, 1vh) * 100);
+  display: grid;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.25s;
+  place-items: center;
+  position: fixed;
+  top: 0;
+  background: var(--app-orange) url("../img/futuristic-bg.jpg") center center / cover no-repeat fixed;
+}
+.end > div {
+  width: 400px;
+  text-align: center;
+  color: var(--app-orange);
+}
+
+h1 {
+  font-size: 42px;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+.end p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.over-start {
+  position: fixed;
+  top: 0;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.25s;
+}
+
+.start {
+  width: 80%;
+  height: 400px;
+  background-image: url('../img/starting-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 4px 3px 12px 6px #0609297d;
+  border: 3px solid var(--app-red);
+  border-radius: 20px;
+  text-align: center;
+}
+.start p {
+  font-size: 40px;
+  color: var(--app-orange);
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-top: 148px;
+  width: 100%;
+  text-align: center;
+}
+.continue {
+  width: 140px;
+  height: 60px;
+  background-color: var(--app-red);
+  border: 3px solid #B00062;
+  border-radius: 50px;
+  margin-top:38px;
+  color: var(--app-orange);
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 18px;
+}
+
+@media (max-width: 1200px) {
+  .body {
+    width: 50%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .body {
+    width: 60%;
+  }
+}
+
+@media (max-width: 650px) {
+  .body {
+    width: 70%;
+  }
+}
+
+@media (max-width: 480px) {
+  .body {
+    width: 80%;
+  }
+}
